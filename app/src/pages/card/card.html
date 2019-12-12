@@ -1,0 +1,172 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      Tarjeta
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only >
+        <ion-icon name="exit" color="primary"></ion-icon>
+      </button>
+
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid class="title-grid">
+    <ion-row>
+      <ion-col col-2></ion-col>
+      <ion-col col-8 text-center>
+        <h2>Ingrese los datos de su tarjeta</h2>
+        <p>Completá los siguientes campos</p>
+      </ion-col>
+      <ion-col col-2></ion-col>
+    </ion-row>
+  </ion-grid>
+  <form class="cool-form"  action="" method="post" id="pay" name="pay">
+
+    <ion-grid >
+      <ion-row >
+          <label ion-text for="email">Email</label>
+      </ion-row>
+
+      <ion-row >
+            <input id="email" name="email" disabled value="{{user.user}}" type="email" placeholder="your email"/>
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="cardNumber">Número de tarjeta</label>
+      </ion-row>
+
+      <ion-row>
+          <input type="text" id="cardNumber" data-checkout="cardNumber" placeholder="4509 9535 6623 3704" />
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="securityCode">Código de seguridad</label>
+      </ion-row>
+
+      <ion-row>
+          <input type="text" id="securityCode" data-checkout="securityCode" placeholder="123" />
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="cardExpirationMonth">Mes de expiración</label>
+      </ion-row>
+
+      <ion-row>
+          <input type="text" id="cardExpirationMonth" data-checkout="cardExpirationMonth" placeholder="12" />
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="cardExpirationYear">Año de expiración</label>
+      </ion-row>
+
+      <ion-row>
+          <input type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" placeholder="2020"/>
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="cardholderName">Nombre de la persona (que aparece en la tarjeta)</label>
+      </ion-row>
+
+      <ion-row>
+          <input type="text" id="cardholderName" data-checkout="cardholderName" placeholder="APRO" />
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="docType">Tipo de documento</label>
+      </ion-row>
+
+      <ion-row>
+          <select id="docType" data-checkout="docType"></select>
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="docNumber">Numero de documento</label>
+      </ion-row>
+
+      <ion-row>
+          <input type="text" id="docNumber" data-checkout="docNumber" placeholder="12345678" />
+      </ion-row>
+
+    </ion-grid>
+<!--
+    <ion-grid >
+      <ion-row >
+          <label ion-text for="email">Email</label>
+      </ion-row>
+
+      <ion-row >
+            <input id="email" name="email" value="{{user.user}}" type="email" placeholder="your email"/>
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="cardNumber">Número de tarjeta</label>
+      </ion-row>
+
+      <ion-row>
+          <input type="text" id="cardNumber" value="4509 9535 6623 3704" data-checkout="cardNumber" placeholder="4509 9535 6623 3704" />
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="securityCode">Código de seguridad</label>
+      </ion-row>
+
+      <ion-row>
+          <input type="text" id="securityCode" value="123" data-checkout="securityCode" placeholder="123" />
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="cardExpirationMonth">Mes de expiración</label>
+      </ion-row>
+
+      <ion-row>
+          <input type="text" id="cardExpirationMonth" value="12" data-checkout="cardExpirationMonth" placeholder="12" />
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="cardExpirationYear">Año de expiración</label>
+      </ion-row>
+
+      <ion-row>
+          <input type="text" id="cardExpirationYear" value="2020" data-checkout="cardExpirationYear" placeholder="2020"/>
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="cardholderName">Nombre de la persona (que aparece en la tarjeta)</label>
+      </ion-row>
+
+      <ion-row>
+          <input type="text" id="cardholderName" value="APRO" data-checkout="cardholderName" placeholder="APRO" />
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="docType">Tipo de documento</label>
+      </ion-row>
+
+      <ion-row>
+          <select id="docType" data-checkout="docType"></select>
+      </ion-row>
+
+      <ion-row>
+          <label ion-text for="docNumber">Numero de documento</label>
+      </ion-row>
+
+      <ion-row>
+          <input type="text" id="docNumber" value="12345678" data-checkout="docNumber" placeholder="12345678" />
+      </ion-row>
+
+    </ion-grid> -->
+
+    <input type="hidden" name="paymentMethodId" />
+
+    <div class="separator"></div>
+    <div class="button-container">
+      <button ion-button block round color="white" class="default-btn" type="button" (click)="createToken()" >Agregar</button>
+    </div>
+    <div class="separator"></div>
+
+  </form>
+</ion-content>

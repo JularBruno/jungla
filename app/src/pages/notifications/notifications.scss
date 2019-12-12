@@ -1,0 +1,21 @@
+page-notifications {
+
+    .scroll-content { 
+        background-image: url("/assets/Notificaiones/1.png");
+        background-color: #ffffff !important; 
+        background-size: cover; 
+        background-position-x: center; 
+        background-blend-mode: multiply; 
+    }
+    .date {
+        font-size: .9em;
+        color: gray;
+        font-style: italic;
+        float: right;
+        margin-right: .2em;
+    }
+
+    .toolbar-title {
+        color: #3aa57d;    
+    }
+}

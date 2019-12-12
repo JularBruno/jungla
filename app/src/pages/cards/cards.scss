@@ -1,0 +1,34 @@
+page-cards {
+  .content {
+      // background: $bg-gradient;
+
+      .title-grid {
+          height: 20vh;
+          display: flex;
+          align-items: center;
+          flex-direction: inherit;
+
+          .row {
+              width: 100%;
+              opacity: .5;
+
+              h2 {
+                  color: $bg-gradient;
+                  font-weight: bold;
+              }
+
+              p {
+                  color: white;
+                  font-weight: bold;
+              }
+          }
+      }
+  }
+    .date {
+        font-size: .9em;
+        color: gray;
+        font-style: italic;
+        float: right;
+        margin-right: .2em;
+    }
+}

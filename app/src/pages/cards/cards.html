@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      Tarjetas
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only >
+        <ion-icon name="exit" color="primary"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <div *ngIf="cards.length > 0">
+
+      <ion-grid class="title-grid">
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col col-8 text-center>
+            <h2>Seleccione una tarjeta</h2>
+          </ion-col>
+          <ion-col col-2></ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <!-- <ion-list-header>
+        Seleccione una tarjeta
+      </ion-list-header> -->
+      <ion-item *ngFor="let card of cards"  (click)="selectCard(card)">
+        <ion-avatar item-start>
+          <img style="object-fit: contain;" [src]="card.payment_method.thumbnail">
+        </ion-avatar>
+        <!-- <ion-thumbnail slot="start">
+          <ion-img [src]="card.payment_method.thumbnail"></ion-img>
+        </ion-thumbnail> -->
+        <!-- <ion-label> -->
+          <h2 style="text-align: center;">**** **** **** {{card.last_four_digits}}</h2>
+        <!-- </ion-label> -->
+      </ion-item>
+    </div>
+
+    <div *ngIf="cards.length <= 0" text-center margin-top>
+      <ion-spinner name="dots" *ngIf="showSpinner"></ion-spinner>
+      <p *ngIf="!showSpinner">No posee tarjetas asociadas</p>
+
+      <!-- <ion-item>
+          <h2>No posee tarjetas asociadas</h2>
+      </ion-item> -->
+    </div>
+
+    <ion-item>
+      <!-- <div class="button-container"> -->
+        <button ion-button block round color="primary" class="default-btn" type="button" (click)="addCard()">Agregar</button>
+      <!-- </div> -->
+    </ion-item>
+
+
+  </ion-list>
+
+
+</ion-content>

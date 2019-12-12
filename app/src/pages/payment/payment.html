@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      Pago
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only >
+        <ion-icon name="exit" color="primary"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid class="title-grid">
+      <ion-row>
+        <ion-col col-2></ion-col>
+        <ion-col col-8 text-center>
+          <h2>Confirmacion</h2>
+          <p>El costo del servicio es de $ {{price}}</p>
+        </ion-col>
+        <ion-col col-2></ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <form class="cool-form">
+      <ion-item>
+        <ion-label stacked>Ingrese código de seguridad de la tarjeta</ion-label>
+        <ion-input type="number" [(ngModel)]="securityCode" [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item>
+
+      <div class="separator"></div>
+      <div class="button-container">
+        <button ion-button block round color="white" class="default-btn" type="button" (click)="pay()">Pagar</button>
+      </div>
+      <div class="separator"></div>
+    </form>
+
+
+    <!-- <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Codigo seguridad</ion-label>
+      <ion-input type="number" [(ngModel)]="securityCode"></ion-input>
+    </ion-item>
+
+    <div class="button-container">
+      <button ion-button block round color="primary" class="default-btn" type="button" (click)="pay()">Pagar</button>
+    </div> -->
+
+  <!-- </ion-list> -->
+</ion-content>

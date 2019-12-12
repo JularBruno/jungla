@@ -1,0 +1,22 @@
+profile-contact {
+    .content {
+        //background: $bg-gradient;
+        .button-container {
+            padding-top: 1em;
+        }
+
+        .subscription-card {
+            border: 1px solid color($colors, primary);
+            border-radius: 10px;
+
+            .card-header {
+                color: color($colors, primary);
+                font-weight: bold;
+            }
+
+            .card-content {
+                color: color($colors, dark);
+            }
+        }
+    }
+}
