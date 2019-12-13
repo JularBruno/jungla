@@ -43710,7 +43710,7 @@ page-home .header .toolbar-content .searchbar-input {
 page-home .content .articles-grid .col .article-container {
   background-size: cover !important;
   background-position: center center !important;
-  height: 21.2em;
+  height: 25em;
   position: relative;
 }
 
@@ -43847,11 +43847,12 @@ page-login .content .button-container div {
 }
 
 page-notifications .scroll-content {
-  background-image: url("/assets/Notificaiones/1.png");
-  background-color: #ffffff !important;
-  background-size: cover;
-  background-position-x: center;
-  background-blend-mode: multiply;
+  background-color: #F3DDC1;
+}
+
+page-notifications .scroll-content .itemM {
+  background-color: #F3DDC1;
+  color: #54DAC8;
 }
 
 page-notifications .date {

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams, AlertController, App, Platform, LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, Content, AlertController, App, Platform, LoadingController } from 'ionic-angular';
 import { Constants } from '../../app/app.constants';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 import { Storage } from '@ionic/storage';
@@ -24,6 +24,9 @@ import { FileOpener } from '@ionic-native/file-opener/';
   providers: [MPProvider, ArticleProvider, UserProvider]
 })
 export class ArticlePage {
+
+  @ViewChild(Content) content: Content;
+  
   item: any = {
     id: 1,
     title: "Este es el título del artículo",
@@ -83,6 +86,8 @@ export class ArticlePage {
   ionViewDidEnter(){
     console.log("ionViewWillEnter")
 
+    // jungla
+    this.content.scrollToBottom(0);
     // isLiked
     if (this.user) {
       for (let i of this.article.like) {
@@ -321,6 +326,10 @@ export class ArticlePage {
   }
   seeInsta() {
     console.log(' see insta')
-    const browser = this.iab.create('https://www.instagram.com/')
+    const browser = this.iab.create('https://www.instagram.com/jungla2020/')
+  }
+  seeVideo() {
+    console.log(' see insta')
+    const browser = this.iab.create('https://www.instagram.com/p/B6B1jGFA9VD/')
   }
 }

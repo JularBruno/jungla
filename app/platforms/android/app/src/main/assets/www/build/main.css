@@ -43710,7 +43710,7 @@ page-home .header .toolbar-content .searchbar-input {
 page-home .content .articles-grid .col .article-container {
   background-size: cover !important;
   background-position: center center !important;
-  height: 21.2em;
+  height: 25em;
   position: relative;
 }
 
@@ -43844,6 +43844,15 @@ page-login .content .button-container {
 
 page-login .content .button-container div {
   width: 100%;
+}
+
+page-notifications .scroll-content {
+  background-color: #F3DDC1;
+}
+
+page-notifications .scroll-content .itemM {
+  background-color: #F3DDC1;
+  color: #54DAC8;
 }
 
 page-notifications .date {
@@ -43981,6 +43990,10 @@ page-welcome .scroll-content {
   background: #7e7a7a;
 }
 
+page-welcome .scroll-content .imagen {
+  height: 100%;
+}
+
 page-welcome .scroll-content .swiper-slide {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
@@ -43999,6 +44012,10 @@ page-welcome .scroll-content .swiper-pagination-bullet-active {
 
 page-welcome .scroll-content .transparent {
   background: transparent;
+}
+
+page-welcome .scroll-content .slide-zoom {
+  height: 100%;
 }
 
 page-welcome .scroll-content ion-toolbar {

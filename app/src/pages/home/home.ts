@@ -10,13 +10,13 @@ import { MPProvider } from '../../providers/mp/mp';
 import { BasePage } from '../base/base';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { FilterPopoverComponent } from '../../components/filter-popover/filter-popover';
-import { PushProvider } from '../../providers/push/push';
+// import { PushProvider } from '../../providers/push/push';
 import { Device } from '@ionic-native/device';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  providers: [MPProvider, ArticleProvider, SubscriptionProvider, PushProvider]
+  providers: [MPProvider, ArticleProvider, SubscriptionProvider]
 })
 export class HomePage extends BasePage {
   tabs: Tabs;
@@ -99,7 +99,7 @@ export class HomePage extends BasePage {
     public alertCtrl: AlertController,
     public app: App,
     public popoverCtrl: PopoverController,
-    public pushProvider: PushProvider,
+    // public pushProvider: PushProvider,
     private device: Device,
   ) {
     super(toastCtrl, loadingCtrl, navCtrl);
@@ -128,7 +128,7 @@ export class HomePage extends BasePage {
         let userPN = {
           userApp: this.user.id
         };
-        this.pushProvider.enablePN(userPN);
+        // this.pushProvider.enablePN(userPN);
         return this.subscriptionProvider.getByUser(this.user.id);
       } else {
         console.log("2 - " + this.user)
@@ -136,7 +136,7 @@ export class HomePage extends BasePage {
           let deviceNumber = {
             userApp: this.device.uuid
           };
-          this.pushProvider.enablePN(deviceNumber);
+          // this.pushProvider.enablePN(deviceNumber);
         }
 
         return Promise.resolve();

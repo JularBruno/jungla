@@ -8,9 +8,10 @@
 
 <ion-content >
   <ion-list>
-    <ion-item style="background-color:rgba(0,255,0,0);" text-wrap *ngFor="let item of notifications">
+    <ion-item class="itemM" text-wrap *ngFor="let item of notifications">
       <h2 >{{item.title}}</h2>
-      <p margin-top margin-bottom>{{item.message}}</p>
+      <!-- <p style="color: #54DAC8" margin-top margin-bottom>{{item.message}}</p> -->
+      <p  margin-top margin-bottom>{{item.message}}</p>
     </ion-item>
   </ion-list>
 </ion-content>
